@@ -53,7 +53,7 @@ Executing the cell below,
 
 It shows a dropdown list, select user pvc which you want to delete.
 
-![](Untitled-04de7b40-77ce-4259-a225-ea4098074bc8.png)
+![](/img/Untitled-04de7b40-77ce-4259-a225-ea4098074bc8.png)
 
 After selection, executes cell below for deletion.
 
@@ -87,13 +87,13 @@ Executing the cell below,
 
 It shows a dropdown list, select Target where to create dataset.
 
-![](Untitled-fbf85ce4-cd5e-42ce-8b66-aea82388d9e5.png)
+![](/img/Untitled-fbf85ce4-cd5e-42ce-8b66-aea82388d9e5.png)
 
 Executing the cell below to specify the size of dataset.
 
     dataset_size = ipywidgets.IntText(description='Size:', value=200)dataset_size
 
-![](Untitled-f1804dff-04c5-4cc3-818d-bc08267db290.png)
+![](/img/Untitled-f1804dff-04c5-4cc3-818d-bc08267db290.png)
 
 Executing the cell below to determine the storage_class
 
@@ -102,7 +102,7 @@ Executing the cell below to determine the storage_class
     
     storage_class
 
-![](Untitled-8fe271b1-dbe6-42fb-8e9e-42d2357671b3.png)
+![](/img/Untitled-8fe271b1-dbe6-42fb-8e9e-42d2357671b3.png)
 
 Executing the cell below to prepare specific yaml string.
 
@@ -131,10 +131,10 @@ Executing the cell below to prepare specific yaml string.
     ''' % (dataset_volume, storage_class, dataset_volume, str(dataset_size.value)+'Gi', dataset_volume)
     print(pv_type_dataset_yaml_string)
 
-![](Untitled-14734d67-417d-4b23-9573-e2a8e0b7ce08.png)
+![](/img/Untitled-14734d67-417d-4b23-9573-e2a8e0b7ce08.png)
 
 Executing the cell below to apply the yaml to create the pv-type dataset.
 
     !! echo "{pv_type_dataset_yaml_string}" | kubectl -n hub apply -f -
 
-![](Untitled-cf5bb3bf-af72-4f2f-befa-70724130d4ef.png)
+![](/img/Untitled-cf5bb3bf-af72-4f2f-befa-70724130d4ef.png)
